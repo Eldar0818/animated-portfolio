@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.container{
+    background-color: #09283a;
+    overflow-x: hidden;
+}
+
+.greating{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #09283a;
+}
+
+.greating-title-box{
+    flex: 3;
+    /* border: 1px solid #f7f7f7; */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.greating-text{
+    color: #20455a;
+    font-size: 50vw;
+    cursor: default;
+    -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+}
+
+.greating-img-box{
+    flex: 1;
+    /* border: 1px solid #f7f7f7; */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.greating-img{
+   width: 100%; 
+   -webkit-user-select: none;
+   -webkit-touch-callout: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.my-name{
+    width: 100%;
+    height: 100vh;
+    background-color: #720ca4;
+}
+
+.name-text{
+    font-size: 15vw;
+    color: #09283a;
+    line-height: 100vh;
+    text-align: center;
+}
+
+.praise-box{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('./assets/introbg01.jpg');
+}
+
+.praise-title{
+    font-size: 10vw;
+    color: #d9d9d9;
+    line-height: 100vh;
+    cursor: default;
+    text-align: end;
+}
+
+.job-title-box{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('./assets/introbg02.jpg');
+}
+
+.job-title{
+    font-size: 10vw;
+    color: #d9d9d9;
+    line-height: 100vh;
+    cursor: default;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 25vh;
+    padding: 0 100px;
+    overflow: hidden;
+}
+
+.projects-heading{
+    font-size: 10vw;
+    color: #20455a;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.p-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.p-img img{
+    border-radius: 5px;
+}
+
+.pj-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.pj-title{
+    color: #d9d9d9;
+    font-size: 6vw;
+}
+
+.pj-desc{
+    color: #d9d9d9;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.learn-more-btn{
+    background-color: transparent;
+    color: #d9d9d9;
+    border: 2px solid #d9d9d9;
+    padding: 10px 25px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.learn-more-btn::after{
+    content: "View Project";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: #d9d9d9;
+    color: #09283a;
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learn-more-btn:hover.learn-more-btn::after{
+    transform: translateX(100%);
+}
+
+.github{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.github-title{
+    font-size: 100px;
+    color: #20455a;
+    text-align: center;
+}
+
+
+.chart{
+    max-width: 1024px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.chart-container{
+    width: 100%;
+    padding: 45px 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('./assets/chartBg.jpg');
+    cursor: pointer;
+    border: 2.5px solid #d9d9d9;
+    border-radius: 25px 0 25px 0;
+}
+
+.chart-title{
+    font-size: 5vw;
+    text-align: center;
+    color: transparent;
+    opacity: 0;
+    transition: all 2.5s ease-in-out;
+    -webkit-text-stroke: 4px #265128;
+}
+
+.chart:hover .chart-title{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .project{
+        flex-direction: column;
+    }
+    .project:nth-child(2n){
+        flex-direction: column;
+    }
+
+    .pj-poster{
+        transform: none !important;
+    }
+
+    .chart{
+        padding: 0 10px;
+    }
+
+}
